@@ -166,9 +166,9 @@ export default defineMock([
           ],
         },
         {
-          path: "/api",
+          path: "/video-source-manager",
           component: "Layout",
-          name: "/api",
+          name: "/video-source-manager",
           meta: {
             title: "接口文档",
             icon: "api",
@@ -178,7 +178,7 @@ export default defineMock([
           },
           children: [
             {
-              path: "apifox",
+              path: "leisuVideo",
               component: "demo/api/apifox",
               name: "Apifox",
               meta: {

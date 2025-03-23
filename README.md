@@ -204,3 +204,10 @@ Thanks to all the contributors!
 
 ## nodejs版本
 18.19.0
+
+## 账密
+账号：admin
+密码：123456
+
+## 项目说明
+本项目用的是动态路由，可以在src\mock\menu.mock.ts这个文件里边自定义

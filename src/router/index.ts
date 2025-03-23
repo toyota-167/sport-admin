@@ -27,7 +27,7 @@ export const constantRoutes: RouteRecordRaw[] = [
     path: "/",
     name: "/",
     component: Layout,
-    redirect: "/dashboard",
+    // redirect: "/dashboard",
     children: [
       {
         path: "dashboard",
@@ -43,48 +43,48 @@ export const constantRoutes: RouteRecordRaw[] = [
         },
       },
       // 前端不再需要在这里配置路由了，都是由后端动态返回
-      // {
-      //   path: "/video-source-manager",
-      //   // component: () => import("@/views/videosource/leisuvideo/index.vue"),
-      //   // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
-      //   // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
-      //   redirect: "/leisuVideo",
-      //   name: "LeisuVideo",
-      //   meta: {
-      //     title: "leisuVideo",
-      //     icon: "homepage",
-      //     affix: true,
-      //     keepAlive: true,
-      //   },
-      //   children: [
-      //     {
-      //       path: "leisuVideo",
-      //       component: () => import("@/views/videosource/leisuvideo/index.vue"),
-      //       // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
-      //       // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
-      //       name: "leisuVideo",
-      //       meta: {
-      //         title: "leisuVideo",
-      //         icon: "homepage",
-      //         affix: true,
-      //         keepAlive: true,
-      //       },
-      //     },
-      //     {
-      //       path: "leisuVideo2",
-      //       component: () => import("@/views/videosource/leisuvideo2/index.vue"),
-      //       // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
-      //       // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
-      //       name: "LeisuVideo2",
-      //       meta: {
-      //         title: "leisuVideo2",
-      //         icon: "homepage",
-      //         affix: true,
-      //         keepAlive: true,
-      //       },
-      //     },
-      //   ],
-      // },
+      {
+        path: "/video-source-manager",
+        // component: () => import("@/views/videosource/leisuvideo/index.vue"),
+        // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
+        // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
+        redirect: "/leisuVideo",
+        name: "LeisuVideo",
+        meta: {
+          title: "leisuVideo",
+          icon: "homepage",
+          affix: true,
+          keepAlive: true,
+        },
+        children: [
+          {
+            path: "leisuVideo",
+            component: () => import("@/views/videosource/leisuvideo/index.vue"),
+            // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
+            // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
+            name: "leisuVideo",
+            meta: {
+              title: "leisuVideo",
+              icon: "homepage",
+              affix: true,
+              keepAlive: true,
+            },
+          },
+          // {
+          //   path: "leisuVideo2",
+          //   component: () => import("@/views/videosource/leisuvideo2/index.vue"),
+          //   // 用于 keep-alive 功能，需要与 SFC 中自动推导或显式声明的组件名称一致
+          //   // 参考文档: https://cn.vuejs.org/guide/built-ins/keep-alive.html#include-exclude
+          //   name: "LeisuVideo2",
+          //   meta: {
+          //     title: "leisuVideo2",
+          //     icon: "homepage",
+          //     affix: true,
+          //     keepAlive: true,
+          //   },
+          // },
+        ],
+      },
       {
         path: "401",
         component: () => import("@/views/error/401.vue"),
